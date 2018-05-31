@@ -18,6 +18,7 @@ open class User(
     }
 }
 
+//User extension
 class GDGUser(
         name: String,
         surName: String,
