@@ -1,21 +1,25 @@
-package exercises
-
-data class User(var name: String, var surname: String, var age: Int)
+package nullableTypes
 
 fun main(args: Array<String>) {
-    val list = listOf(
-            User("Paperina", "Disney", 10),
-            User("Lalla", "Marvel", 23),
-            User("Pluto", "Disney", 48),
-            User("Harry", "Potter", 11),
-            User("James", "Potter", 40),
-            User("Thor", "Marvel", 400),
-            User("Tick", "Amazon", 52)
-    )
+    /**
+     * http://exercism.io/exercises/kotlin/rna-transcription/readme
+     * http://rosalind.info/problems/rna/
+     *
+     * Given a DNA strand, return its RNA complement (per RNA transcription).
+     *
+     * Both DNA and RNA strands are a sequence of nucleotides.
+     * The four nucleotides found in DNA are adenine (A), cytosine (C), guanine (G) and thymine (T).
+     *
+     *   Given a DNA strand, its transcribed RNA strand is formed by
+     *   replacing each nucleotide with its complement:
+     *
+     *   G -> C
+     *   C -> G
+     *   T -> A
+     *   A -> U
+     */
 
-    println("PRINT USERNAMES BEGINNING WITH T")
+    val dna = "GATGGAACTTGACTACGTAAATT"
 
-    println("PRINT USERS WITH AGE INCLUDING BETWEEN 20 AND 100")
-
-    println("PRINT SURNAMES (AVOID DUPLICATIONS) AGE OF EVEN NUMBER")
+    println("rna is: ")
 }
