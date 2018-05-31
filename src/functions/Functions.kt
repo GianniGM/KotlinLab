@@ -1,4 +1,4 @@
-package classesAndFunctions
+package functions
 
 //TODO: every function returns something,
 // if have side effects then returns Unit (omitted by default)
@@ -19,7 +19,7 @@ fun sumClassic(a: Int, b: Int): Int {
 // takes two ints and returns an Int
 fun sumSmart(a: Int, b: Int) = a + b
 
-// extends Int class get one int from "this" other from parameter and returns an Int
+// extends Int class, get first Int from "this" and second one from parameter, returns an Int
 fun Int.sum(a: Int) = this + a
 
 // same but we use infix to use as infix operator
