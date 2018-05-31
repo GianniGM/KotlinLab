@@ -11,7 +11,7 @@ package classesAndFunctions
  *  componentN() functions used for destructuring operator
  *
  *  further information: https://bit.ly/2L7yxs6 */
-data class User( //constructor
+data class Developer( //constructor
 
         //fields with getters
         val userName: String,
@@ -45,9 +45,9 @@ private fun greetings(): String {
 }
 
 fun generateUsersList() = listOf(
-        User("Larry", 28, "male"),
-        User("Sibo", 37, "male"),
-        User("Lalla", 22, "female"),
-        User("MJ", 20, "female"),
-        User("Harry Potter", 12, "Vingardium Leviosa")
+        Developer("Larry", 28, "male"),
+        Developer("Sibo", 37, "male"),
+        Developer("Lalla", 22, "female"),
+        Developer("MJ", 20, "female"),
+        Developer("Harry Potter", 12, "Vingardium Leviosa")
 )
