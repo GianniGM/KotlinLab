@@ -5,6 +5,7 @@ data class User(var name: String, var surname: String, var age: Int)
 fun main(args: Array<String>) {
     val list = listOf(
             User("Paperina", "Disney", 10),
+            User("Lalla", "Marvel", 23),
             User("Pluto", "Disney", 48),
             User("Harry", "Potter", 11),
             User("James", "Potter", 40),
