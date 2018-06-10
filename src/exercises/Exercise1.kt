@@ -24,9 +24,22 @@ fun main(args: Array<String>) {
      */
 
     val dna = "GATGGAACTTGACTACGTAAATT"
-
-    val rna = "NO"
-
+    val rna = complement(dna)
+    println(rna)
     assertEquals(SOLUTION, rna)
+
 }
 
+fun complement(dna: String): String {
+    var rna = ""
+    for (c in dna) {
+        rna += when (c) {
+            'G' -> "C"
+            'C' -> "G"
+            'T' -> "A"
+            'A' -> "U"
+            else -> throw UnsupportedOperationException("value bust be: G, C, T, A")
+        }
+    }
+    return rna
+}
