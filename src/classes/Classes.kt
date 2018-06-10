@@ -13,6 +13,10 @@ class GDGUser(
     }
 }
 
+/*
+class GDGUser(...) : SuperClass(...)
+ */
+
 fun main(args: Array<String>) {
     val user = GDGUser("Diana", "Bernabei", "dBerna", gdg = "Pisa")
     val user2 = GDGUser("Domenico", "Blanco", gdg = "Pisa", nickname = "Link")

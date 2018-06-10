@@ -8,6 +8,7 @@ fun main(args: Array<String>) {
 private fun greetings(): String {
     // note: for a better performance of: map, filter, sortedBy in large collections
     // check Kotlin Sequences
+    //todo spostare in lambads e funzioni di ordine superiore
 
     return generateUsersList()
             .filter { it.age in 10..23 }
@@ -26,7 +27,8 @@ private fun greetings(): String {
 fun generateUsersList() = listOf(
         Developer("Larry", 28, "male"),
         Developer("Sibo", 37, "male"),
-        Developer("Lalla", 22, "female"),
+        Developer("Michele", 22, "male"),
         Developer("MJ", 20, "female"),
+        Developer("Leo", 22, "male"),
         Developer("Harry Potter", 12, "Vingardium Leviosa")
 )

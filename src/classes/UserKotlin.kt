@@ -2,7 +2,7 @@ package classes
 
 //Kotlin classes are final by default use open operator
 open class User(
-        private val name: String,       //private field: no getter if outside the class
+        private var name: String ,       //private field: no getter if outside the class
         private val surName: String,    //private field: no getter if outside the class
         val nickname: String,           //public field: have just getter
         var isOffline: Boolean = true   //public field: have each getter and setter and default

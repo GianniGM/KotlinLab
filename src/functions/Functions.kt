@@ -5,7 +5,7 @@ package functions
 fun main(args: Array<String>): Unit {
     val sumC = sumClassic(5, 2)
     val sumS = sumSmart(3, 4)
-    val awesomeSum = 10.sum(2)
+    val awesomeSum = 10.somma(2)
 
     val awesomeIncrementer = 5 incrementIfMaxThan 2
     println("incrementer: $awesomeIncrementer")
@@ -19,8 +19,10 @@ fun sumClassic(a: Int, b: Int): Int {
 // takes two ints and returns an Int
 fun sumSmart(a: Int, b: Int) = a + b
 
-// extends Int class, get first Int from "this" and second one from parameter, returns an Int
-fun Int.sum(a: Int) = this + a
+// EXTENSION FUNCTION,
+// extending Int class, get first Int from "this" and second one from parameter,
+// returns an Int
+infix fun Int.somma(a: Int) = this + a
 
 // same but we use infix to use as infix operator
 infix fun Int.incrementIfMaxThan(a: Int) = if (this > a)
