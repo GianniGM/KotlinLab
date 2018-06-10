@@ -1,5 +1,9 @@
 package nullableTypes
 
+import kotlin.test.assertEquals
+
+const val SOLUTION = "CUACCUUGAACUGAUGCAUUUAA"
+
 fun main(args: Array<String>) {
     /**
      * http://exercism.io/exercises/kotlin/rna-transcription/readme
@@ -21,5 +25,8 @@ fun main(args: Array<String>) {
 
     val dna = "GATGGAACTTGACTACGTAAATT"
 
-    println("rna is: ")
+    val rna = "NO"
+
+    assertEquals(SOLUTION, rna)
 }
+
