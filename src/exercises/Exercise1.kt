@@ -27,11 +27,12 @@ fun main(args: Array<String>) {
 fun complement(dna: String): String {
     var rna = ""
     for (c in dna) {
-        when (c) {
-            'G' -> rna = rna + "C"
-            'C' -> rna = rna + "G"
-            'T' -> rna = rna + "A"
-            'A' -> rna = rna + "U"
+        rna += when (c) {
+            'G' -> 'C'
+            'C' -> 'G'
+            'T' -> 'A'
+            'A' -> 'U'
+            else -> throw Exception("wrong char")
         }
     }
     return rna
