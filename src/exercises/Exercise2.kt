@@ -14,7 +14,7 @@ fun main(args: Array<String>) {
             User("Tick", "Amazon", 52)
     )
 
-    println("PRINT NAMES BEGINNING WITH T")
+// PRINT NAMES BEGINNING WITH "T"
     val namesStartingWithT = usersList
             .filter{it.name[0].toUpperCase() == 'T'}
             .map{it.name}
@@ -22,14 +22,23 @@ fun main(args: Array<String>) {
 
     println(namesStartingWithT)
 
+<<<<<<< HEAD
     // PRINT USERS WITH AGE INCLUDING BETWEEN 20 AND 100"
+=======
+
+//  PRINT USERS WITH AGE INCLUDING BETWEEN 20 AND 100
+>>>>>>> Added exercise1 solution
     val usersForAge = usersList
             .filter{it.age in 20 .. 100}
             .map{it.name}
 
     println(usersForAge)
 
+<<<<<<< HEAD
     // PRINT SURNAMES OF USERS WITH EVEN AGE SORTED ALPHABETICALLY AVOIDING DUPLICATES
+=======
+//  PRINT SURNAMES OF USERS WITH EVEN AGE SORTED ALPHABETICALLY AVOIDING DUPLICATES
+>>>>>>> Added exercise1 solution
     val usersWithEvenAge = usersList
             .filter{it.age.rem(2) == 0}
             .map{it.surname}

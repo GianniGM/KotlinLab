@@ -37,7 +37,7 @@ fun complement(dna: String): String {
             'C' -> 'G'
             'T' -> 'A'
             'A' -> 'U'
-            else -> throw UnsupportedOperationException("value bust be: G, C, T, A")
+            else -> throw UnsupportedOperationException("value must be: G, C, T, A")
         }
     }
     return rna
