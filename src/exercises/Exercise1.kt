@@ -33,10 +33,10 @@ fun complement(dna: String): String {
     var rna = ""
     for (c in dna) {
         rna += when (c) {
-            'G' -> "C"
-            'C' -> "G"
-            'T' -> "A"
-            'A' -> "U"
+            'G' -> 'C'
+            'C' -> 'G'
+            'T' -> 'A'
+            'A' -> 'U'
             else -> throw UnsupportedOperationException("value bust be: G, C, T, A")
         }
     }
