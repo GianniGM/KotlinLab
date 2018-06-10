@@ -27,7 +27,6 @@ fun main(args: Array<String>) {
     val rna = complement(dna)
     println(rna)
     assertEquals(SOLUTION, rna)
-
 }
 
 fun complement(dna: String): String {
