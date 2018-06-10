@@ -21,5 +21,12 @@ fun main(args: Array<String>) {
 
     val dna = "GATGGAACTTGACTACGTAAATT"
 
+
     println("rna is: ")
+}
+
+fun complement(dna: String) {
+    for (char in dna) {
+        when char
+    }
 }
