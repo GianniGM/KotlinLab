@@ -1,7 +1,7 @@
 package exercises
 
 fun main(args: Array<String>) {
-    //1. create an infix extensions function "elevation"
+    //1. create an infix extensions function power
     // that calculate a power of an Int
     // without using pow
 
