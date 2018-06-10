@@ -2,30 +2,34 @@ package basics
 
 fun main(args: Array<String>) {
     lists()
+    mutableList()
     arrays()
     whileLoop()
     forLoops()
 }
 
-fun lists() {
+fun lists(): Unit {
     //immutableList you can't modify this list
     val immutableList = listOf("cannoli", "arancine")
 
-    //instead you can create a new list with a new value using plus
+    //you can create new list with a new value using plus instead
     val newImmutableList = immutableList.plus("scacce")
     println("immutableList is $immutableList updated with another list with a new value_ $newImmutableList")
+}
 
+fun mutableList():  Unit {
     // or you can use a mutableList
+    // NOTE: mutableList is val, why??
     val mutableList = mutableListOf("cinghiale", "panzanella")
-    mutableList.add("torta co' bischeri")
+    mutableList.add("torta coi bischeri")
 
     println("mutableList: $mutableList")
 }
 
 fun arrays() {
-
     //you can create an array
-    val array = Array(5) { it * 2 }
+    val array = Array(5, { index -> index * 2 })
+    array[2] = 255
     println(array.toList())
 
     //todo: differences between arrays and mutableLists: https://bit.ly/2LL7kws
@@ -53,8 +57,8 @@ private fun forLoops() {
     println()
 
     //iterating over a list getting the index and its value
-    for((index, element) in items.withIndex())
-        print("index $index is $element, ")
+    for ((index, element) in items.withIndex())
+        print("index $index contains $element, ")
     println()
 
     // for(index = 5; i <= 12; i+=2)
