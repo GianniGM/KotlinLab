@@ -1,13 +1,8 @@
 package exercises
 
-// 1. create an Int infix extensions function "power"
+//1. create an infix extensions function "power" that calculate a power of an Int
 // without using pow
-infix fun Int.power(a:Int): Int{
-
-}
 
 fun main(args: Array<String>) {
-    //2. calculate 5^4
 
-    //3. print the result
 }
