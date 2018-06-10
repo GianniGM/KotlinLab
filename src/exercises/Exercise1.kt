@@ -26,6 +26,7 @@ fun main(args: Array<String>) {
     val dna = "GATGGAACTTGACTACGTAAATT"
 
     val rna = complement(dna)
+    println(rna)
 
     assertEquals(SOLUTION, rna)
 }
@@ -39,6 +40,7 @@ fun complement(dna: String): String {
             'T' -> 'A'
             'A' -> 'U'
             else -> throw Exception("wrong char")
+
         }
     }
     return rna
