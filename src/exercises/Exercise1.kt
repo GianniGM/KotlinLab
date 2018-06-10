@@ -21,12 +21,18 @@ fun main(args: Array<String>) {
 
     val dna = "GATGGAACTTGACTACGTAAATT"
 
-
-    println("rna is: ")
+    println("rna is: ${complement(dna)}")
 }
 
-fun complement(dna: String) {
-    for (char in dna) {
-        when char
+fun complement(dna: String): String {
+    var rna = ""
+    for (c in dna) {
+        when (c) {
+            'G' -> rna = rna + "C"
+            'C' -> rna = rna + "G"
+            'T' -> rna = rna + "A"
+            'A' -> rna = rna + "U"
+        }
     }
+    return rna
 }
