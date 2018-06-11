@@ -6,9 +6,9 @@ It contains:
 1. __Hello World__
 2. __basics__: variables, loops, ranges;
 3. __functions__: how use Kotlin Functions
-4. __lambdas__: _TODO_
-5. __classes__: Kotlin classes, Java class VS Kotlin class
-6. __dataClasses__: how to use data classes 
+4. __classes__: Kotlin classes, Java class VS Kotlin class
+5. __dataClasses__: how to use data classes 
+6. __lambdas__: how use lambdas in Kotlin
 7. __nullableTypes__: how Kotlin handle null variables
 8. __exercises__: a bunch of simple exercises
 
@@ -40,7 +40,11 @@ write your code inside the console:
 <img src="http://kotlin-for-python.readthedocs.io/en/latest/_images/REPL.png" width=250>
 
 #### play main functions
-//todo
+
+Should You have imported good this project you can find a little green "play" icon.
+You can play that button to run that _main_ function 
+
+![Imgur](https://i.imgur.com/7q0rc3d.png)
 
 ### Other Samples
 * __Try__ Kotlin: https://try.kotlinlang.org
