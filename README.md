@@ -50,5 +50,5 @@ You can play that button to run that _main_ function
 * __Try__ Kotlin: https://try.kotlinlang.org
 * __Kotlin Koans__: https://kotlinlang.org/docs/tutorials/koans.html
 * __Kotlin Koans__ using __EduTools__: https://kotlinlang.org/docs/tutorials/edu-tools-learner.html
-
+* __Exercism__: https://github.com/exercism/kotlin
 
