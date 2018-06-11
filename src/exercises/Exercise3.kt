@@ -4,44 +4,76 @@ package exercises
 // A binary tree is made up of nodes which are objects
 // with a left child node, a right child node and a Int value.
 // If a node is missing one of the two children, make that child a null
-
 data class Node(
-        // Fill this in
         val value: Int,
-        val leftChild:  Node?,
-        val rightChild: Node?
+        val leftChild: Node? = null,
+        val rightChild: Node? = null
 )
 
 fun main(args: Array<String>) {
-    // PART 2: Build a binary tree
+    // PART 2: Build a binary search tree
     // Build the following binary tree
     //              10
     //           5      15
     //         2   6  X    18
-    val node2  = Node(2, null, null)
-    val node6  = Node(6, null, null)
-    val node18 = Node(18, null, null)
-    val node5  = Node(5, node2, node6)
-    val node15 = Node(15, null, node18)
-    val node10 = Node(10, node5, node15)
+    val tree = Node(10,
+            Node(5,
+                    Node(2),
+                    Node(6)
+            ),
+            Node(15, rightChild = Node(18))
+    )
 
     // PART 3: Print a node
     // Write a function printNode that prints a node's representation
-    // If you print the node 10 you should get:
-    //   10
-    // 5   15
+    // Print the tree as sequence of numbers beginning from the smallest value,
+    printNode(tree)
+    println()
 
-    // If you print the node 15 you should get:
-    //   15
-    // _   18
+    // (GDG PISA BONUS) PART 4: SUM-TREE
+    // Infix extension function
 
-    // (BONUS) PART 4: Infix extension function
-    // Write an infix extension function that creates a node given two nodes.
-    // The function should be used like this node5 10.makeNode node15
+    // write an infix extension function
+    // that links two nodes with a superNode containing the min value of the child
+
+    // Node(2) minTree Node(3)
+    //
+    //     2
+    //  2     3
+
+    val leftChild = Node(1)
+    val rightChild = Node(3)
+    val minTree = leftChild minTree rightChild
+
+    printNodeSmarter(minTree)
 
 }
 
-fun printNode(node: Node) {
-    println(node.value)
-    println("${node.leftChild?.value ?: "_"}  ${node.rightChild?.value ?: "_"}")
+fun  printNode(tree: Node?) {
+    if (tree != null) {
+        printNode(tree.leftChild)
+        print("${tree.value}, ")
+        printNode(tree.rightChild)
+    }
+}
+
+// let  https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/let.html
+// with https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/with.html
+fun  printNodeSmarter(tree: Node?) {
+    with(tree) {
+        this?.let {
+            printNodeSmarter(leftChild)
+            print("$value, ")
+            printNodeSmarter(rightChild)
+        }
+    }
+}
+
+infix fun Node.minTree(right: Node):Node{
+    val min = if (this.value < right.value)
+        this.value
+    else
+        right.value
+
+    return Node(min, this, right)
 }
