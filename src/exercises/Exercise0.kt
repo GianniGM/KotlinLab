@@ -9,6 +9,13 @@ infix fun Int.power(a: Int): Int {
     return result
 }
 
+infix fun Int.power(a: Int): Int {
+    var result = 1
+    for (any in 1 .. a)
+        result *= this
+    return result
+}
+
 fun main(args: Array<String>) {
     //2. calculate 5^4
     val a = 5.power(4)
