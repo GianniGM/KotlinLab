@@ -1,6 +1,6 @@
 # KotlinLab: Samples and Exercises
 
-This repo contains a bunch of basic examples useful to take the first steps on Kotlin Programming Language and its features.
+This repo contains a bunch of basic examples useful to take first steps on Kotlin Programming Language and its features.
 
 It contains:
 1. __Hello World__
@@ -17,6 +17,7 @@ It contains:
 You need to install __Kotlin__ and the __IntelliJ platform__:
 * JetBrains __IntelliJ__ IDEA Community: https://www.jetbrains.com/idea/download/
 * Getting Started with Kotlin: https://kotlinlang.org/docs/tutorials/getting-started.html
+* __import__ this repo (do not use 'Open', use 'import project' instead)
 
 ## __Learn__ 📚
 
@@ -28,21 +29,22 @@ You need to install __Kotlin__ and the __IntelliJ platform__:
 ## __Have Fun__  🎉
 
 ### __Usage__
-You can run this examples in two ways: copy and paste each functions inside __REPL__  or directly running __main functions__ inside the files.
+You can run the examples in two ways: copy and paste each functions inside __REPL__  or directly running __main functions__.
 
 #### REPL
-Double Shift inside IntelliJ and type __"Kotlin REPL"__:
+* Press __Shift__ twice inside IntelliJ and type __"Kotlin REPL"__:
 
-<img src="http://kotlin-for-python.readthedocs.io/en/latest/_images/REPL_open.png" width=250>
+<img src="http://kotlin-for-python.readthedocs.io/en/latest/_images/REPL_open.png" width=300>
 
-write your code inside the console:
 
-<img src="http://kotlin-for-python.readthedocs.io/en/latest/_images/REPL.png" width=250>
+* write your code inside the console then press `Ctrl + Enter` :
+
+<img src="http://kotlin-for-python.readthedocs.io/en/latest/_images/REPL.png" width=300>
 
 #### play main functions
 
-Should You have imported good this project you can find a little green "play" icon.
-You can play that button to run that _main_ function 
+Should You have imported well this project, you can find a little green "play" icon on the left of each main function.
+Press that button to run _main_ function 
 
 ![Imgur](https://i.imgur.com/7q0rc3d.png)
 
