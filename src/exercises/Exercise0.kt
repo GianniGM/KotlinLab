@@ -1,11 +1,7 @@
 package exercises
 
-import kotlin.test.assertEquals
-
 //1. create an infix extensions function "power" that calculate a power of an Int
 // without using pow
-
-
 infix fun Int.power(a: Int): Int {
     var result = 1
     for (any in 1 .. a)

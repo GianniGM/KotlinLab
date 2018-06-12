@@ -20,8 +20,8 @@ fun main(args: Array<String>) {
             .map { it.name }
     // or you can use .map(User::name)
 
-    println(namesStartingWithT)
 
+    println(namesStartingWithT)
 
     // PRINT USERS WITH AGE INCLUDING BETWEEN 20 AND 100
     val usersForAge = usersList
