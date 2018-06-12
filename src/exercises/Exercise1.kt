@@ -5,7 +5,7 @@ import kotlin.test.assertEquals
 const val SOLUTION = "CUACCUUGAACUGAUGCAUUUAA"
 
 fun main(args: Array<String>) {
-    /**
+    /*
      * http://exercism.io/exercises/kotlin/rna-transcription/readme
      * http://rosalind.info/problems/rna/
      *
@@ -25,7 +25,7 @@ fun main(args: Array<String>) {
 
     val dna = "GATGGAACTTGACTACGTAAATT"
 
-    val rna = "NO"
+    val rna = "TODO"
 
     assertEquals(SOLUTION, rna)
 }

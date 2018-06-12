@@ -34,6 +34,6 @@ fun main(args: Array<String>) {
 
 }
 
-// todo: you may fing interesting let and with
+// todo: you may find interesting "let" and "with"
 // let  https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/let.html
 // with https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/with.html
