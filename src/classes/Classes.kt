@@ -1,17 +1,7 @@
 package classes
 
-//User extension
-class GDGUser(
-        name: String,
-        surName: String,
-        nickname: String,
-        isOffline: Boolean = true,
-        var gdg: String
-) : User(name, surName, nickname, isOffline){
-    override fun toString(): String {
-        return "${super.toString()} from GDG$gdg"
-    }
-}
+import classes.UserJava.UserJava
+import classes.UserKotlin.GDGUser
 
 /*
 class GDGUser(...) : SuperClass(...)

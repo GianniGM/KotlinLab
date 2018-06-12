@@ -1,6 +1,6 @@
-package classes;
+package classes.UserJava;
 
-public class UserJava {
+public class UserJava implements UserIntertfaceJava{
     private static Integer currentId = 0;
 
     private String name;
@@ -64,5 +64,10 @@ public class UserJava {
 
     public Integer getUserId() {
         return userId;
+    }
+
+    @Override
+    public String greetings() {
+        return "Hello " + nickName +  "!";
     }
 }
