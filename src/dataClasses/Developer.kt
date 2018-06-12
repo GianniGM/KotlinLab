@@ -12,11 +12,12 @@ package dataClasses
  *
  *  further information: https://bit.ly/2L7yxs6 */
 data class Developer( //constructor
+
         //fields with getters
         val userName: String,
         val age: Int,
         val gender: String,
 
-        //fields with getters and setters
+        //fields with both getters and setters
         var isOnline: Boolean = false
 )
