@@ -1,6 +1,6 @@
 package nullableTypes
 
-import classes.UserKotlin.GDGUser
+import classes.GDGUser
 
 fun main(args: Array<String>) {
 //todo: aggiungere lateinit
