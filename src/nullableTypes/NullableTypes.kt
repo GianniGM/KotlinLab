@@ -1,6 +1,6 @@
 package nullableTypes
 
-import classes.GDGUser
+import classes.UserKotlin.GDGUser
 
 fun main(args: Array<String>) {
 //todo: aggiungere lateinit
@@ -34,9 +34,10 @@ fun main(args: Array<String>) {
     // ...using elvis operator ?:
     println(gdgUser?.toString() ?: "no user")
 
+    //[WARNING]!! will raise a NullPointerException at runtime
+    println(gdgUser!!.toString())
+
     // you can throw an exception if you want
     println(gdgUser?.toString() ?: throw UnsupportedOperationException("no user"))
 
-    //[DO NOT USE]!! will raise a NullPointerException at runtime
-    println(gdgUser!!.toString())
 }

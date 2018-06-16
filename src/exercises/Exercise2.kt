@@ -2,20 +2,6 @@ package exercises
 
 data class User(var name: String, var surname: String, var age: Int)
 
-// 1. Write a function "TNames" that takes a list of Users as input and prints
-//    the names of Users whose name starts with T.
-
-
-// 2. Write a function "adultNames" that takes a list of Users as input and prints
-//    the names of the Users whose age is between 20 and 100 (inclusive).
-
-
-// 3. Write a function "evenAgedSurnames" that takes a list of Users as input and
-//    prints alphabetically sorted surnames (without repeating the same surname twice)
-//    of Users whose age is an even number.
-
-
-// Do not change anything from here on
 fun main(args: Array<String>) {
     val usersList = listOf(
             User("Paperina", "Disney", 10),
@@ -28,12 +14,29 @@ fun main(args: Array<String>) {
             User("Tick", "Amazon", 52)
     )
 
-    println("Names beginning with T:")
-    TNames(usersList)    
+    // PRINT NAMES BEGINNING WITH "T"
+    val namesStartingWithT = usersList
+            .filter { it.name[0].toUpperCase() == 'T' }
+            .map { it.name }
+    // or you can use .map(User::name)
 
-    println("Names of users with an age between 20 and 100 (inclusive)")
-    adultNames(usersList)
+    println(namesStartingWithT)
 
-    println("Surnames of users with an even age")
-    evenAgedSurnames(usersList)
+
+    // PRINT USERS WITH AGE INCLUDING BETWEEN 20 AND 100
+    val usersForAge = usersList
+            .filter { it.age in 20..100 }
+            .map { it.name }
+
+    println(usersForAge)
+
+    // PRINT SURNAMES OF USERS WITH EVEN AGE SORTED ALPHABETICALLY AVOIDING DUPLICATES
+    val usersWithEvenAge = usersList
+            .filter { it.age.rem(2) == 0 }
+            .map { it.surname }
+            .sortedBy { it }
+            .distinct()
+
+    // PRINT SURNAMES OF USERS WITH EVEN AGE SORTED ALPHABETICALLY AVOIDING DUPLICATES"
+    println(usersWithEvenAge)
 }

@@ -1,5 +1,7 @@
 package exercises
 
+import kotlin.test.assertEquals
+
 // Create an infix extension function "power" that calculates the power of an Int
 // (Without using the built-in pow function)
 infix fun Int.power(a: Int): Int {
@@ -11,5 +13,8 @@ infix fun Int.power(a: Int): Int {
 // Do not change anything from here on
 
 fun main(args: Array<String>) {
-    assertEquals(125, print(5 power 3))
+
+    val power = 5 power 3
+    println(power);
+    assertEquals<Int>(125, power)
 }
