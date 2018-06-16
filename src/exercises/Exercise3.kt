@@ -5,22 +5,10 @@ package exercises
 // with a left child node, a right child node and a Int value.
 // If a node is missing one of the two children, make that child a null
 data class Node(
-    val value: Int,
-    val leftChild: Node? = null,
-    val rightChild: Node? = null
+        val value: Int,
+        val leftChild: Node? = null,
+        val rightChild: Node? = null
 )
-
-// Reserved space for exercise 3
-fun  printNode(tree: Node?) {
-    if (tree != null) {
-        printNode(tree.leftChild)
-        print("${tree.value}, ")
-        printNode(tree.rightChild)
-    }
-}
-
-// Reserved space for exercise 4
-
 
 fun main(args: Array<String>) {
     // 2. Build a binary tree
@@ -28,17 +16,16 @@ fun main(args: Array<String>) {
     //              10
     //           5      15
     //         2   6  X    18
-    // and store it in a val called "tree"
 
-    val tree = 
-        Node(10,
+    val tree = Node(10,
             Node(5,
-                Node(2),
-                Node(6)
+                    Node(2),
+                    Node(6)
             ),
             Node(15,
-                rightChild = Node(18))
-        )
+                    rightChild = Node(18)
+            )
+    )
 
     // PART 3: Print a node
     // Write a function "printNode" that prints an the values in an ordered
@@ -47,7 +34,7 @@ fun main(args: Array<String>) {
     // Expected output would be 2 5 6 10 15 18
     // [Write the function in the allotted space on top of the file]
     printNode(tree)
-
+    println()
 
     // (GDG PISA BONUS) PART 4: SUM-TREE
     // Infix extension function
@@ -63,8 +50,38 @@ fun main(args: Array<String>) {
     //     2
     //  2     3
 
+    val leftChild = Node(2)
+    val rightChild = Node(3)
+    val minTree = leftChild minTree rightChild
+
+    printNodeSmarter(minTree)
 }
 
-// also, you may want to look up "let" and "with"
+fun  printNode(tree: Node?) {
+    if (tree != null) {
+        printNode(tree.leftChild)
+        print("${tree.value}, ")
+        printNode(tree.rightChild)
+    }
+}
+
 // let  https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/let.html
 // with https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/with.html
+fun  printNodeSmarter(tree: Node?) {
+    with(tree) {
+        this?.let {
+            printNodeSmarter(leftChild)
+            print("$value, ")
+            printNodeSmarter(rightChild)
+        }
+    }
+}
+
+infix fun Node.minTree(right: Node):Node{
+    val min = if (this.value < right.value)
+        this.value
+    else
+        right.value
+
+    return Node(min, this, right)
+}
